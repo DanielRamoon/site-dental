@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bucal System</title>
+
+    <!-- responsive meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- For IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- master stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Responsive stylesheet -->
+    <!-- <link rel="stylesheet" href="css/responsive.css" /> -->
+    <!--Color Switcher Mockup-->
+    <link rel="stylesheet" href="css/color-switcher-design.css" />
+    <!--Color Themes-->
+    <link
+      rel="stylesheet"
+      href="css/color-themes/default-theme.css"
+      id="theme-color-file"
+    />
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./images/landingPage/logo-azul.fw.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/landingPage/logo-azul.fw.png"
+
+      sizes="32x32"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      href="./images/landingPage/logo-azul.fw.png"
+      sizes="16x16"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Importa a biblioteca FontAwesome -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+
+
+
+    <script>
+        let currentIndex = 0; // Índice atual do carrossel
+        const step = 80; // Largura de cada imagem no carrossel (ajuste conforme necessário)
+    
+        function moveCarousel(direction) {
+            const slides = document.querySelector('.carousel-container div');
+            const totalSlides = slides.children.length;
+            const maxIndex = totalSlides - 1;
+    
+            if (direction === 'next' && currentIndex < maxIndex) {
+                currentIndex++;
+            } else if (direction === 'prev' && currentIndex > 0) {
+                currentIndex--;
+            }
+    
+            const offset = -currentIndex * step;
+            slides.style.transition = 'transform 0.5s ease'; // Adiciona uma transição suave
+            slides.style.transform = `translateX(${offset}px)`;
+        }
+    </script>
+
+<script type="text/javascript">
+    (function() {
+        emailjs.init("danielramoon@gmail.com"); // Substitua "user_youruserid" pelo seu ID de usuário do Email.js
+    })();
+</script>
+
+
+     <!-- Fixing Internet Explorer-->
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="js/html5shiv.js"></script>
+    <![endif]-->
+  </head>
+  <style>
+    .whatsapp-button {
+      background-color: #25d366; /* Cor verde do WhatsApp */
+      color: #ffffff; /* Cor branca para o texto */
+      font-weight: bold; /* Texto em negrito */
+      border-radius: 15px; /* Bordas arredondadas */
+      padding: 15px 30px; /* Espaçamento interno */
+      border: none; /* Remove a borda */
+      position: relative; /* Para posicionar o ícone */
+      left: 40px;
+      top: 40px;
+      font-size: 30px;
+      display: flex; /* Para alinhar verticalmente */
+      justify-content: center; /* Para alinhar horizontalmente */
+      align-items: center; /* Para alinhar verticalmente */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.9); /* Adiciona sombra */
+    }
+
+    .whatsapp-button i {
+      font-size: 44px; /* Tamanho do ícone */
+      margin-right: 10px; /* Espaçamento entre o ícone e o texto */
+    }
+
+    .whatsapp-button::after {
+      content: url("ícone-do-whatsapp.png");
+      position: absolute;
+      right: 10px; /* Distância do ícone para a direita */
+      top: 50%; /* Alinha o ícone verticalmente */
+      transform: translateY(-50%); /* Centraliza verticalmente */
+    }
+
+    /* Estilos para a seção com a classe .fundo-imagem */
+    .form-captura {
+      background-image: url("./images/landingPage/bg-meio.jpg");
+      background-size: cover;
+      background-position: center;
+      height: 900px;
+    }
+
+    .form-img {
+      background-image: url("./images/landingPage/imgdente.fw.png");
+      background-size: cover; /* Para cobrir todo o espaço da div */
+      background-position: center bottom; /* Posição da imagem na parte inferior vertical */
+      position: absolute; /* Para que a posição da div seja absoluta */
+      left: 3%; /* Para estender a div por toda a largura da seção */
+      bottom: 1580px; /* Para alinhar a div na parte inferior da seção */
+      width: 35%; /* Para estender a div por toda a largura da seção */
+      height: 400px; /* Altura da div - ajuste conforme necessário */
+    }
+
+  
+
+    .formulario {
+    width: 50%; 
+    height: 80%;
+    padding: 20px; 
+    margin-top: 600px; /* Mover para baixo */
+    margin-left: 40%; /* Mover para a esquerda */
+    background-color: #191970;
+    border-radius: 25px;
+    position: relative;
+    top: 100px;
+    display: flex; /* Usa flexbox para alinhar os itens */
+    flex-direction: column; /* Alinha os itens na vertical */
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+
+/* Estilos para a mensagem */
+.mensagem {
+    color: white; /* Cor do texto */
+    font-weight: bold; /* Negrito */
+}
+
+/* Estilos para os campos de input */
+input {
+    width: 90%; /* Largura dos campos de input */
+    margin-bottom: 20px; /* Espaçamento entre os campos */
+    padding: 15px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    background-color: #7b68ee; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border-radius: 10px;
+    margin-left: 50px;
+}
+
+input::placeholder {
+    color: white; /* Cor do texto do placeholder */
+    font-size: 18px;
+}
+
+
+
+/* Estilos para o botão de envio */
+button {
+    width: 100%; /* Largura do botão */
+    padding: 10px; /* Espaçamento interno */
+    background-color: #2ecc71; /* Cor de fundo */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    cursor: pointer; /* Cursor ao passar por cima */
+}
+
+.carousel-container {
+            overflow: hidden; /* Para ocultar qualquer conteúdo que exceda o contêiner */
+            white-space: nowrap; /* Para garantir que as imagens sejam exibidas em uma linha */
+            transition: transform s ease;
+        }
+
+        .carousel-container img {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    transition: transform 0.7s ease; /* Adiciona uma transição suave */
+}
+
+.carousel-container img:hover {
+    transform: scale(1.3); /* Aumenta o tamanho da imagem em 10% */
+}
+
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.controls button {
+    justify-content: center;
+    width: 10px;
+    height: auto;
+    border-radius: 25px;
+    color: #0056b3; /* Cor do texto */
+    font-weight: bold;
+    font-size: 24px;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.controls button:hover {
+    background-color: #0056b3; 
+}
+
+.main-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('./images/landingPage/bg-rodape.jpg'); /* Adiciona a imagem de fundo */
+    background-size: cover; /* Garante que a imagem cubra toda a área */
+    padding: 20px; /* Adiciona algum espaço ao redor do conteúdo */
+}
+
+.left-carousel {
+}
+
+.carousel2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+.carousel2 img {
+    width: 350px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.content {
+    flex: 2;
+    text-align: center;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.social-icons {
+    display: flex;
+}
+
+.icon {
+    margin-right: 30px;
+   
+}
+
+.icon img {
+    width: 70px;
+    height: auto;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 80%;
+    right: 320px;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+   .img-dentista {
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    top: 0;
+    left: 5%;
+  }
+
+  .img-logo {
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -530px; /* Ajuste conforme necessário */
+  margin-left: -120px;
+  
+
+  }
+
+  .title-main > div {
+    position: relative;
+    top: auto;
+    left: -100px;
+    z-index: auto;
+    margin-top: 20px; /* Ajuste a margem conforme necessário */
+    flex-direction: column;
+
+  }
+  .text-and-button {
+    margin-left: -180px;
+    width: auto;
+  }
+
+  .text-and-button h1 {
+    font-size: 20px;
+    width: 380px;
+    margin-left: 20px;
+  }
+
+  .text-and-button p {
+    width: auto;
+    margin-left: -20px;
+
+  }
+
+  .text-and-button button {
+    width: 70%;
+  }
+
+  .container-video iframe {
+    width: 380px;
+    height: 300px;
+  }
+
+  .container-main {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .text-and-button2 {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 400px;
+    margin-left: 80px;
+    padding: 10px;
+  }
+
+  .text-and-button2 h1 {
+    font-size: 20px;
+    width: 380px;
+    margin-left: 5px;
+  }
+
+  .text-and-button2 p {
+    font-size: 8px;
+    position: relative;
+    right: 10px;
+    max-width: 400px;
+  }
+  .text-and-button2 button {
+    display: flex;
+    position: relative;
+    top: -70px;
+  }
+
+  .text-and-button2 img {
+    display: none;
+    position: relative;
+    left: -350px;
+  } 
+
+  .form-captura {
+    max-width: 100%;
+  }
+
+  .form-img {
+    display: none;
+  }
+
+  .formulario {
+    width: 382px;
+    position: relative;
+    right: 155px;
+  }
+  .formulario form {
+    margin-right: 65px;
+  }
+
+  .inputs-wrapper {
+    width: 400px;
+  }
+
+  .dormulario button {
+    width: 500px;
+    font-size: 10px;
+  }
+
+  .carousel-container {
+    display: block;
+    flex-direction: column;
+  }
+
+  .img-carousel {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .main-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .main-section button {
+    margin-left: -38px;
+  }
+
+  .main-section img {
+    position: relative;
+    top: -150px;
+  }
+
+  .carousel2 {
+    position: relative;
+    top: 170px;
+    left: 50px;
+  }
+
+  .icon{
+    position: relative;
+    top: 105px;
+    display: flex;
+    margin-top: 15px;
+    flex-direction: row;
+    left: 138px;
+  }
+
+}
+
+
+
+
+@media (min-width: 1900px) {
+    /* Ajuste os estilos conforme necessário para telas maiores */
+    .left-carousel {
+        margin-right: 60px; /* Por exemplo, aumente a margem do carrossel à esquerda */
+    }
+
+    .social-icons {
+        margin-top: 40px; /* Aumente a margem superior dos ícones das redes sociais */
+    }
+
+    .icon {
+        margin-right: 50px; /* Aumente o espaçamento entre os ícones */
+    }
+
+    .icon-footer {
+      position: relative;
+      top: 400px;
+    }
+  
+
+.carousel2 {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+.carousel2 img {
+    width: 550px;
+    height: auto;
+    margin-bottom: 10px;
+    position: relative;
+    right: 100px;
+    top: 70px;
+}
+
+.icon img {
+    width: 90px;
+    height: auto;
+    border-radius: 50%;
+    background-color: white;
+    position: relative;
+    top: 100%;
+    right: 620px;
+}
+
+.form-img {
+      background-image: url("./images/landingPage/imgdente.fw.png");
+      background-size: cover; /* Para cobrir todo o espaço da div */
+      background-position: center bottom; /* Posição da imagem na parte inferior vertical */
+      position: absolute; /* Para que a posição da div seja absoluta */
+      left: 3%; /* Para estender a div por toda a largura da seção */
+      bottom: 1580px; /* Para alinhar a div na parte inferior da seção */
+      width: 600px; /* Para estender a div por toda a largura da seção */
+      height: 600px; /* Altura da div - ajuste conforme necessário */
+      object-fit: cover;
+    }
+
+    .img-sec2{
+      position: relative;
+      left: 600px;
+    }
+
+
+}
+
+
+
+    @keyframes blink {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.5;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  </style>
+
+  
+
+  <body>
+    <div class="boxed_wrapper">
+      <div class="preloader"></div>
+
+      <!--Start header style1 area-->
+      <!-- <header class="header-style1-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <div class="inner-content clearfix">
+                    <div class="header-style1-logo float-left">
+                        <a href="index.html">
+                            <img src="images/resources/logo.png" alt="orthomais logo">
+                        </a>
+                    </div>   
+                    <div class="header-contact-info float-left">
+                        <ul>
+                            <li>
+                                <div class="single-item">
+                                    <div class="icon">
+                                        <span class="icon-support"></span>    
+                                    </div>
+                                    <div class="text">
+                                        <p>(74) 99932-5065 - (74) 9 8806-0520</p> 
+                                        <span>contato@orthomais.com.br</span>   
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                
+                            </li>
+                        </ul>  
+                    </div>
+                    <div class="header-style1-button float-right">
+                        <a href="https://whats.link/orthomais"><span class="icon-date"></span>Agendar Consulta</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+</header>   -->
+      <!--End header style1 area-->
+
+      <!--Start mainmenu area-->
+      <!--            -->
+      <!--End mainmenu area-->
+
+      <!-- Hidden Navigation Bar -->
+      <!-- <section class="hidden-bar right-align"></section> -->
+      <!-- End Hidden Bar -->
+
+      <!--Start breadcrumb area-->
+      <section
+        class="breadcrumb-area"
+        style="
+          background-image: url(images/landingPage/bg-principal.jpg);
+          position: relative;
+          z-index: 2;
+        "
+      >
+        <div class="container-section">
+          <div class="row">
+            <div class="col-xl-12" style="margin-left: -60%">
+              <div class="inner-content clearfix">
+                <div class="title-main">
+                  <img
+                  class="img-dentista"
+                    src="./images/resources/ft-dentista03.fw.png"
+                    alt="Descrição da imagem"
+                    style="
+                      width: 100%;
+                      height: 550px;
+                      position: relative;
+                      top: -70px;
+                      left: -30px;
+                    "
+                  />
+                  <div
+                    style="
+                      position: absolute;
+                      top: 400px;
+                      left: -250px;
+                      z-index: 2;
+                    "
+                  >
+                    <!-- Move a imagem para cima e define o z-index -->
+                    <img
+                    class="img-logo"
+                      src="./images/landingPage/logo-azul.fw.png"
+                      alt="Descrição da imagem"
+                      style="max-width: 200px; height: auto;position: absolute;
+                      top: 40px;
+                      left: 300px;
+                      " 
+                    />
+                    <!-- Diminui o tamanho da imagem -->
+                  </div>
+                  <div
+                    class="text-and-button"
+                    style="
+                      position: absolute;
+                      top: 100px;
+                      left: 110%;
+                      text-align: center;
+                    "
+                  >
+                    <h1 style="color: #fff; text-align: center">
+                     ESSE É O MELHOR TRATAMENTOCOM APARELHO ORTODÔNTICO QUE VOCÊ VAI ENCONTRAR!
+                    </h1>
+                    <p
+                      style="
+                        color: #fff;
+                        font-size: 20px;
+                        text-align: center;
+                        width: 500px;
+                        margin-top: 20px;
+                      "
+                    >
+                      Seus dentes alinhados e perfeitos no menor tempo possível  
+                    </p>
+                    <button class="whatsapp-button">
+                      <i class="fab fa-whatsapp"></i> Agende sua consulta
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="specialities-single-area aos-init"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        style="position: relative; z-index: 2; height: 300px"
+      >
+        <div class="container-video">
+          <div class="row">
+            <div
+              class="col-md-12 text-center"
+              style="position: relative; top: -90px"
+            >
+              <iframe
+                width="800"
+                height="300"
+                src="https://www.youtube.com/embed/SEVU-YLpMnE"
+                frameborder="0"
+                allowfullscreen
+                style="
+                  position: relative;
+                  z-index: 1;
+                  box-shadow: 0 0 10px 5px white;
+                "
+              ></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="container-main">
+          <div class="row">
+            <div class="col-xl-12" style="margin-left: 10%">
+              <div class="inner-content clearfix">
+                <div class="title-sec2 float-left">
+                  <div
+                    class="text-and-button2"
+                    style="
+                      position: absolute;
+                      top: -30px;
+                      left: 25%;
+                      transform: translateX(-50%);
+                      text-align: center;
+                      z-index: 1;
+                    "
+                  >
+                    <h1
+                      style="
+                        font-size: 32px;
+                        font-weight: bold;
+                        color: #7b68ee;
+                        text-align: center;
+                        margin-bottom: 60px;
+                      "
+                    >
+                     O Sorrisoque você quer </br>ao seu alcance
+                    </h1>
+                    <p
+                      style="
+                        color: #7b68ee;
+                        font-size: 20px;
+                        text-align: center;
+                        width: 500px;
+                        margin: 0 auto;
+                        margin-bottom: 60px;
+                      "
+                    >
+                     Nosso tratamento será personalizado para você ter o resultado que deseseja, no menor tempo possível </br></br>
+                     Vamos planejar seu tratamento e se você seguir a risca  todas as orientações você vai retirar o aparelho ais rapido do que vpcê imagina.
+                    </p>
+                    <button
+                      style="
+                        background-color: #7b68ee;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin: 40px auto;
+                        padding: 15px 30px;
+                        border: none;
+                        color: #fff;
+                        cursor: pointer;
+                        border-radius: 20px;
+                        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
+                        font-weight: bold;
+                        animation: blink 1s infinite;
+                      "
+                    >
+                      <i
+                        class="fab fa-whatsapp"
+                        style="
+                          font-size: 44px;
+                          margin-right: 10px;
+                          color: #25d366;
+                        "
+                      ></i>
+                      <!-- Altera a cor do ícone do WhatsApp para verde -->
+                      <span style="font-size: 30px">Agende sua consulta</span>
+                      <!-- Aumenta o tamanho do texto do botão -->
+                    </button>
+                  </div>
+
+                  <img
+                  class="img-sec2"
+                    src="./images/resources/ft-dentista02.fw.png"
+                    alt="Descrição da imagem"
+                    style="
+                      width: 100%;
+                      height: 550px;
+                      position: relative;
+                      top: -60px;
+                      left: 740px;
+                      z-index: 1;
+                    "
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--End Specialities Single Area-->
+
+      <!--Start Footer Contact Info Area-->
+      <!-- <section class="footer-contact-info-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="single-footer-contact-box left-icon wow fadeInDown" data-wow-delay="100ms">
+                    <div class="icon-holder">
+                        <span class="icon-gps"></span>
+                    </div>
+					                    <div class="text-holder">
+                        <h3>Matriz</h3>
+                        <p>Av. Cel. José Castelo Branco, 423 A, Quadra 04<br>Remanso-BA</p></p>
+                        <a class="btn-two" href="contato.html">Outras Unidades</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="single-footer-contact-box right-box wow fadeInUp" data-wow-delay="100ms">
+                    <div class="icon-holder">
+                        <span class="icon-calendar"></span>
+                    </div>
+                    <div class="text-holder">
+                        <h3>Agendar Consulta</h3>
+                        <p>Verifique disponibilidade de horários e profissionais em nossas unidades.</p>
+                        <a class="btn-two" href="https://whats.link/orthomais">Marque já!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> 
+<!--End Footer Contact Info Area-->
+
+      <!--Start footer area-->
+
+      <!--Start footer bottom area-->
+
+      <!--End footer bottom area-->
+
+      <section class="form-captura">
+        <div class="form-img">
+            <!-- Conteúdo da div (se houver) -->
+        </div>
+        <div class="formulario">
+            <h2 style="margin-bottom: 70px; text-align: center; font-size: 40px;" class="mensagem">Deixe seu contato que </br> nossa equipe vai te ligar</h2>
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <div class="inputs-wrapper">
+                    <input type="text" name="name" placeholder="Digite seu nome" required>
+                    <input type="text" name="email" placeholder="WhatsApp">
+                </div>
+                <button type="submit" style="width: 70%; margin-left: 50px; margin-top: 30px; margin-bottom: 50px;" class="whatsapp-button">
+                    <i class="fab fa-whatsapp"></i> Agende sua consulta
+                  </button>
+
+                  <input type="hidden" name="accessKey" value="880a89c9-807c-41f9-b53e-a8078a39e9ed">
+            </form>
+        </div>
+    </section>
+
+    <section style="display: flex; justify-content: center; align-items: center;">
+        <div class="carousel-container">
+            <h1 style="text-align: center; margin-top: 20px; color: #7b68ee; font-size: 44px;">+ 2000</h1>
+            <p style="text-align: center; margin-top: 10px; color: #7b68ee; font-size: 24px;">Resultados reais de pacientes</p>
+            <div style="display: flex; justify-content: center; align-items: center;" class="img-carousel">
+                <img src="./images/landingPage/img-aparelho01.fw.png" alt="Imagem 1" style="width: 300px; height: auto; margin-right: 10px;">
+                <img src="./images/landingPage/img-aparelho02.fw.png" alt="Imagem 2" style="width: 300px; height: auto; margin-right: 10px;">
+                <img src="./images/landingPage/img-aparelho03.fw.png" alt="Imagem 3" style="width: 300px; height: auto;">
+                <img src="./images/landingPage/img-aparelho01.fw.png" alt="Imagem 1" style="width: 300px; height: auto; margin-right: 10px;">
+                
+            </div>
+            <div class="controls" style="text-align: center;">
+                <button  onclick="moveCarousel('prev')" style="background-color: transparent;" class="prev"><i class="fas fa-arrow-left"></i></button> <!-- Ícone para voltar -->
+                <button onclick="moveCarousel('next')" style="background-color: transparent;" class="next"><i class="fas fa-arrow-right"></i></button> <!-- Ícone para avançar -->
+            </div>
+            
+            
+        </div>
+    </section>
+
+    <section class="main-section" >
+      
+        <div class="content">
+           
+            <button style="margin-bottom: 30px;" class="whatsapp-button">
+                <i class="fab fa-whatsapp"></i> Agende sua consulta
+              </button>
+            <img style="position: relative; top:10px;" src="./images/resources/ft-dentista01.fw.png" alt="Outra Imagem">
+        </div>
+        <div class="left-carousel">
+            <!-- Carrossel de 3 imagens -->
+            
+        </div>
+        <div class="social-icons" style="position: relative; left: 10%; top:0px;" >
+          <div class="carousel2" style="margin-top: -90px;">
+            <img src="./images/resources/depoimento.fw.png" alt="Imagem 1" style="width: 400; height: auto;">
+            <img src="./images/resources/depoimento1.fw.png" alt="Imagem 2" style="width: 400; height: auto;">
+            <img src="./images/resources/depoimento2.fw.png" alt="Imagem 3"style="width: 400; height: auto;">
+            <img src="./images/resources/depoimento3.fw.png" alt="Imagem 4" style="width: 400; height: auto;">
+        </div>
+        
+            <div>
+              <div class="icon-footer" style="display: flex; position:relative; top: 84%; left: 50px;">
+                <div class="icon"><img src="./images/landingPage/botao-face.fw.png" alt="Instagram"></div>
+                <div class="icon"><img src="./images/landingPage/botao-insta.fw.png" alt="Facebook"></div>
+                <div class="icon"><img src="./images/landingPage/botao-whatsapp.fw.png" alt="WhatsApp"></div>
+              </div>
+            
+            
+        </div>
+       
+       
+    </section>
+    <div class="copyright-text text-center">
+      <p>© <a href="#">Responsável Técnica: Dra. Paula Carolina CRO. 7824 PE - EPAO. 1915.</p>
+  </div>
+    
+    
+    
+    
+</body>
+    </div>
+    <!--Scroll to top-->
+    <div class="scroll-to-top scroll-to-target thm-bg-clr" data-target="html">
+      <span class="fa fa-angle-up"></span>
+    </div>
+
+    <!-- Color Palate / Color Switcher -->
+    <div class="color-palate">
+      <div class="color-trigger">
+        <i class="fa fa-gear"></i>
+      </div>
+      <div class="color-palate-head">
+        <h6>Choose Your Color</h6>
+      </div>
+      <div class="various-color clearfix">
+        <div class="colors-list">
+          <span
+            class="palate default-color active"
+            data-theme-file="css/color-themes/default-theme.css"
+          ></span>
+          <span
+            class="palate teal-color"
+            data-theme-file="css/color-themes/teal-theme.css"
+          ></span>
+          <span
+            class="palate navy-color"
+            data-theme-file="css/color-themes/navy-theme.css"
+          ></span>
+          <span
+            class="palate yellow-color"
+            data-theme-file="css/color-themes/yellow-theme.css"
+          ></span>
+          <span
+            class="palate blue-color"
+            data-theme-file="css/color-themes/blue-theme.css"
+          ></span>
+          <span
+            class="palate purple-color"
+            data-theme-file="css/color-themes/purple-theme.css"
+          ></span>
+          <span
+            class="palate olive-color"
+            data-theme-file="css/color-themes/olive-theme.css"
+          ></span>
+          <span
+            class="palate red-color"
+            data-theme-file="css/color-themes/red-theme.css"
+          ></span>
+        </div>
+      </div>
+      <div class="palate-foo">
+        <span>You can easily change and switch the colors.</span>
+      </div>
+    </div>
+    <!-- /.End Of Color Palate -->
+
+    <!-- main jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Wow Script -->
+    <script src="js/wow.js"></script>
+    <!-- bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- bx slider -->
+    <script src="js/jquery.bxslider.min.js"></script>
+    <!-- count to -->
+    <script src="js/jquery.countTo.js"></script>
+    <script src="js/appear.js"></script>
+    <!-- owl carousel -->
+    <script src="js/owl.js"></script>
+    <!-- validate -->
+    <script src="js/validation.js"></script>
+    <!-- mixit up -->
+    <script src="js/jquery.mixitup.min.js"></script>
+    <!-- isotope script-->
+    <script src="js/isotope.js"></script>
+    <!-- Easing -->
+    <script src="js/jquery.easing.min.js"></script>
+    <!-- Gmap helper -->
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyB2uu6KHbLc_y7fyAVA4dpqSVM4w9ZnnUw"></script>
+    <!--Gmap script-->
+    <script src="js/gmaps.js"></script>
+    <script src="js/map-helper.js"></script>
+    <!-- jQuery ui js -->
+    <script src="assets/jquery-ui-1.11.4/jquery-ui.js"></script>
+    <!-- Language Switche  -->
+    <script src="assets/language-switcher/jquery.polyglot.language.switcher.js"></script>
+    <!-- jQuery timepicker js -->
+    <script src="assets/timepicker/timePicker.js"></script>
+    <!-- Bootstrap select picker js -->
+    <script src="assets/bootstrap-sl-1.12.1/bootstrap-select.js"></script>
+    <!-- html5lightbox js -->
+    <script src="assets/html5lightbox/html5lightbox.js"></script>
+    <!-- html5lightbox js -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!--Color Switcher-->
+    <script src="js/color-settings.js"></script>
+
+    <!--Revolution Slider-->
+    <script src="plugins/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="plugins/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.actions.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.kenburn.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.layeranimation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.migration.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.navigation.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.parallax.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.slideanims.min.js"></script>
+    <script src="plugins/revolution/js/extensions/revolution.extension.video.min.js"></script>
+    <script src="js/main-slider-script.js"></script>
+
+    <!-- thm custom script -->
+    <script src="js/custom.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+
+<script>
+    // Função de inicialização que será chamada quando a página estiver totalmente carregada
+    window.onload = function() {
+        // Função para validar o formulário
+        function validarFormulario(event) {
+            // Impedir o envio do formulário
+            event.preventDefault();
+
+            // Obter os valores dos campos do formulário
+            var nome = document.getElementsByName('name')[0].value;
+            var email = document.getElementsByName('email')[0].value;
+
+            // Validar os campos do formulário (exemplo simples)
+            if (nome === ''  || email === '' ) {
+                alert('Por favor, preencha todos os campos.');
+                return;
+            }
+
+            // Mostrar os dados do formulário no console
+            console.log('name:', nome);
+            console.log('Email:', email);
+
+            // Exibir alerta de confirmação
+            alert('Formulário enviado com sucesso!');
+
+            // Se os dados forem válidos, enviar o formulário
+            this.submit();
+        }
+
+        // Adicionar um ouvinte de evento para o evento 'submit' do formulário
+        var form = document.querySelector('form');
+        if (form) { // Verificar se o formulário foi encontrado
+            form.addEventListener('submit', validarFormulario);
+        } else {
+            console.error('Formulário não encontrado.');
+        }
+    };
+</script>
+
+
+  </body>
+</html>
